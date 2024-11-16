@@ -19,8 +19,39 @@ namespace Mastermind
         public MainWindow()
         {
             InitializeComponent();
+            RandomKleurcode();
         }
+
+        private void RandomKleurcode()
+        {
+           
+            
+            var colors = new List<string> { "Red", "Yellow", "Orange", "White", "Green", "Blue" };
+
+            
+            
+            var random = new Random();
+            var randomCode = colors.OrderBy(x => random.Next()).Take(4).ToList();
+
+   
+
+            this.Title = "Mastermind (" + string.Join(", ", randomCode) + ")";
+        }
+
+        
+
+
+             }
+
+
+    
+       
+            
+               
+
+        
+
+        
 
        
     }
-}
