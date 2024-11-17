@@ -16,6 +16,8 @@ namespace Mastermind
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<string> randomCode;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -27,7 +29,7 @@ namespace Mastermind
             var colors = new List<string> { "Red", "Yellow", "Orange", "White", "Green", "Blue" };
 
             var random = new Random();
-            var randomCode = colors.OrderBy(x => random.Next()).Take(4).ToList();
+            randomCode = colors.OrderBy(x => random.Next()).Take(4).ToList();
 
             this.Title = "Mastermind (" + string.Join(", ", randomCode) + ")";
         }
@@ -146,6 +148,88 @@ namespace Mastermind
                         break;
                 }
             }
+        }
+
+        private void kleurCodeCheck(object sender, RoutedEventArgs e)
+        {
+            var kleur = (eersteLabel.Background as SolidColorBrush)?.Color;
+
+            if (kleur.Value == (Color)ColorConverter.ConvertFromString(randomCode[0]))
+            {
+                eersteLabel.BorderBrush = new SolidColorBrush(Colors.DarkRed);
+                eersteLabel.BorderThickness = new Thickness(2);
+            }
+            if (kleur.Value != (Color)ColorConverter.ConvertFromString(randomCode[0])) 
+            {
+                eersteLabel.BorderBrush = new SolidColorBrush(Colors.Wheat);
+                eersteLabel.BorderThickness = new Thickness(2);
+
+            }
+            else
+            {
+                eersteLabel.BorderBrush = new SolidColorBrush(Colors.DarkRed);
+                eersteLabel.BorderThickness = new Thickness(2);
+            }
+            
+                var kleur1 = (tweedeLabel.Background as SolidColorBrush)?.Color;
+
+                if (kleur1.Value == (Color)ColorConverter.ConvertFromString(randomCode[1]))
+                {
+                tweedeLabel.BorderBrush = new SolidColorBrush(Colors.DarkRed);
+                tweedeLabel.BorderThickness = new Thickness(2);
+                }
+                if (kleur1.Value != (Color)ColorConverter.ConvertFromString(randomCode[1]))
+                {
+                tweedeLabel.BorderBrush = new SolidColorBrush(Colors.Wheat);
+                tweedeLabel.BorderThickness = new Thickness(2);
+
+                }
+                else
+                {
+                tweedeLabel.BorderBrush = new SolidColorBrush(Colors.DarkRed);
+                tweedeLabel.BorderThickness = new Thickness(2);
+                }
+
+            var kleur2 = (derdeLabel.Background as SolidColorBrush)?.Color;
+
+            if (kleur2.Value == (Color)ColorConverter.ConvertFromString(randomCode[2]))
+            {
+                derdeLabel.BorderBrush = new SolidColorBrush(Colors.DarkRed);
+                derdeLabel.BorderThickness = new Thickness(2);
+            }
+            if (kleur2.Value != (Color)ColorConverter.ConvertFromString(randomCode[2]))
+            {
+                derdeLabel.BorderBrush = new SolidColorBrush(Colors.Wheat);
+                derdeLabel.BorderThickness = new Thickness(2);
+
+            }
+
+            else
+            {
+                derdeLabel.BorderBrush = new SolidColorBrush(Colors.DarkRed);
+                derdeLabel.BorderThickness = new Thickness(2);
+            }
+
+            var kleur3 = (vierdeLabel.Background as SolidColorBrush)?.Color;
+
+            if (kleur3.Value == (Color)ColorConverter.ConvertFromString(randomCode[3]))
+            {
+                vierdeLabel.BorderBrush = new SolidColorBrush(Colors.DarkRed);
+                vierdeLabel.BorderThickness = new Thickness(2);
+            }
+            if (kleur3.Value != (Color)ColorConverter.ConvertFromString(randomCode[3]))
+            {
+                vierdeLabel.BorderBrush = new SolidColorBrush(Colors.Wheat);
+                vierdeLabel.BorderThickness = new Thickness(2);
+
+            }
+            else
+            {
+                vierdeLabel.BorderBrush = new SolidColorBrush(Colors.DarkRed);
+                vierdeLabel.BorderThickness = new Thickness(2);
+            }
+
+
         }
     }
 }
