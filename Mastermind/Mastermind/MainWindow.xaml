@@ -12,7 +12,7 @@
             <ColumnDefinition Width="97*"/>
             <ColumnDefinition Width="642*"/>
         </Grid.ColumnDefinitions>
-        <ComboBox x:Name="Combobox1" HorizontalAlignment="Left" Margin="58,56,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" Grid.ColumnSpan="2" RenderTransformOrigin="0.141,0.643" >
+        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="58,56,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" Grid.ColumnSpan="2" RenderTransformOrigin="0.141,0.643" SelectionChanged="comboBox1_SelectionChanged" >
             <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Yellow"/>
             <ComboBoxItem Content="Orange"/>
@@ -21,7 +21,7 @@
             <ComboBoxItem Content="Blue"/>
 
         </ComboBox>
-        <ComboBox x:Name="Combobox1_Copy" HorizontalAlignment="Left" Margin="108,56,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" >
+        <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Margin="108,56,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" SelectionChanged="comboBox2_SelectionChanged">
             <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Yellow"/>
             <ComboBoxItem Content="Orange"/>
@@ -30,7 +30,7 @@
             <ComboBoxItem Content="Blue"/>
 
         </ComboBox>
-        <ComboBox x:Name="Combobox1_Copy1" HorizontalAlignment="Left" Margin="256,56,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" >
+        <ComboBox x:Name="comboBox3" HorizontalAlignment="Left" Margin="256,56,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" SelectionChanged="comboBox3_SelectionChanged" >
             <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Yellow"/>
             <ComboBoxItem Content="Orange"/>
@@ -39,7 +39,7 @@
             <ComboBoxItem Content="Blue"/>
 
         </ComboBox>
-        <ComboBox x:Name="Combobox1_Copy2" HorizontalAlignment="Left" Margin="407,56,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" RenderTransformOrigin="0.219,0.456" >
+        <ComboBox x:Name="comboBox4" HorizontalAlignment="Left" Margin="407,56,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" RenderTransformOrigin="0.219,0.456" SelectionChanged="comboBox4_SelectionChanged" >
             <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Yellow"/>
             <ComboBoxItem Content="Orange"/>
@@ -48,7 +48,11 @@
             <ComboBoxItem Content="Blue"/>
 
         </ComboBox>
-        <Button Grid.Column="2" Content="Check code" HorizontalAlignment="Left" VerticalAlignment="Top" Width="164" Margin="160,160,0,0"/>
+        <Button Grid.Column="2" Content="Check code" HorizontalAlignment="Left" VerticalAlignment="Top" Width="164" Margin="152,202,0,0"/>
+        <Label x:Name="eersteLabel" Grid.Column="1"  HorizontalAlignment="Left" Margin="60,97,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.018,-1.133" Height="73" Width="118" Grid.ColumnSpan="2"/>
+        <Label x:Name="tweedeLabel" Grid.Column="2"  HorizontalAlignment="Left" Margin="108,97,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.018,-1.133" Height="73" Width="119"/>
+        <Label x:Name="derdeLabel" Grid.Column="2"  HorizontalAlignment="Left" Margin="256,97,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.018,-1.133" Height="73" Width="119"/>
+        <Label x:Name="vierdeLabel" Grid.Column="2"  HorizontalAlignment="Left" Margin="407,97,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.018,-1.133" Height="73" Width="119"/>
 
     </Grid>
 </Window>
