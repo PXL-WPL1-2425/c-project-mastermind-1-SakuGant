@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Mastermind
 {
@@ -24,6 +25,19 @@ namespace Mastermind
             RandomKleurcode();
         }
 
+        private void Tries()
+        {
+            
+
+        }
+
+        
+
+       
+
+
+
+
         private void RandomKleurcode()
         {
             var colors = new List<string> { "Red", "Yellow", "Orange", "White", "Green", "Blue" };
@@ -31,8 +45,9 @@ namespace Mastermind
             var random = new Random();
             randomCode = colors.OrderBy(x => random.Next()).Take(4).ToList();
 
-            this.Title = "Mastermind (" + string.Join(", ", randomCode) + ")";
+            this.Title = "Mastermind (" + string.Join(", ", randomCode ) + ")";
         }
+        
 
         private void comboBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -151,7 +166,16 @@ namespace Mastermind
         }
 
         private void kleurCodeCheck(object sender, RoutedEventArgs e)
+
+
         {
+
+            int attempts = 0;
+
+            attempts =+ 1; == attempttextbox.
+
+            
+
             var kleur = (eersteLabel.Background as SolidColorBrush)?.Color;
 
             if (kleur.Value == (Color)ColorConverter.ConvertFromString(randomCode[0]))
